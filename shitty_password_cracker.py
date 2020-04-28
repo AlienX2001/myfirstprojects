@@ -44,10 +44,13 @@ def sha512_decrypt(text):
 
 #main
 #check if any args given
-if(len(sys.argv)==1):
+if(len(sys.argv)<=2):
     help_text()
 #check if any worsdlist given
-if(sys.argv[3] is False):
+command3=""
+try:
+    command3+=sys.argv[3]
+except IndexError:
     print("Enter wordlist")
 else:
     try:
@@ -97,4 +100,5 @@ else:
                     break
         else:
             print("Wrong hash")
+
 
