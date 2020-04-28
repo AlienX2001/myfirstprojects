@@ -3,7 +3,7 @@ import socket
 ip_address=input("Enter IP to scan:-")
 limiting_port=int(input("Enter last port"))
 
-for port in range(75,limiting_port+1):
+for port in range(1,limiting_port+1):
     dst=[ip_address,port]
     s = socket.socket()
     s.settimeout(10)
