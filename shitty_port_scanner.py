@@ -7,7 +7,6 @@ for port in range(1,limiting_port+1):
     dst=[ip_address,port]
     s = socket.socket()
     s.settimeout(10)
-    #s.connect(dst)
     try:
         s.connect(tuple(dst))
     except socket.timeout:
